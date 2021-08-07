@@ -13,8 +13,8 @@ const generatePath = (...parts) => parts.filter((a) => a).join(".");
 
 const childStyle = {
     marginLeft: 8,
-    borderLeft: "1px solid #80808073",
-    borderBottom: ".5px solid #80808073",
+    borderLeft: "1px solid #0043594f",
+    borderBottom: ".5px solid #0043594f",
     paddingLeft: 8
 };
 
@@ -66,9 +66,14 @@ const Person = (props) => {
     ); 
 };
 
+
+// COMPONENTE
 export function Question () {
       return (
+          <S.List>
+              <S.Title>Árvore de Itens</S.Title>
               <Person  children={base} path={""} />
+            </S.List>
     );
   
         }
