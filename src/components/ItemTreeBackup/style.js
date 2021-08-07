@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
-  display: flex;
-  align-items: first-baseline;
-  background: var(--white);
-  padding: 0px 8vw 10px 8vw;
-  
+  width:100%;
 
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-    padding: 50px 8vw;
+  div{
+    margin-top: 1rem;
   }
+`;
+
+
+
+
+export const Icon = styled.span`
+  margin-left: 2rem;
+  cursor: pointer;
+`;
+
+export const Item = styled.span`
+  font-family: 'Poppins', sans-serif;
+  margin-left: 2rem;
+  cursor: pointer;
 `;
 
 export const Title = styled.h1`
