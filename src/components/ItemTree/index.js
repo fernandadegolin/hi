@@ -1,8 +1,8 @@
 import React, { useState }from 'react';
 import * as S from './style';
 import data from '../../data/data.json';
-import opened from '../../assets/opened.svg'
-import closed from '../../assets/closed.svg'
+import opened from '../../assets/opened.svg';
+import closed from '../../assets/closed.svg';
 
 const base = data;
 const openedIcon = <img src={opened} alt="icon opened"/>;
@@ -75,7 +75,7 @@ export function ItemList () {
   
         }
   
-
+console.log(ItemList);
 
 //   return(
 //       <Person children={base} path={""} />

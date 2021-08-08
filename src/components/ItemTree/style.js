@@ -33,8 +33,7 @@ export const Item = styled.span`
   margin-left: 2rem;
   font-weight: 600;
   color: #004359;
-  
-    margin-right: auto;
+  margin-right: auto;
   cursor: pointer;
 `;
 
