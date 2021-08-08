@@ -5,7 +5,6 @@ import opened from '../../assets/opened.svg'
 import closed from '../../assets/closed.svg'
 
 const base = data;
-
 const openedIcon = <img src={opened} alt="icon opened"/>;
 const closedIcon = <img src={closed} alt="icon closed"/>;
 
@@ -15,27 +14,29 @@ const childStyle = {
     marginLeft: 8,
     borderLeft: "1px solid #0043594f",
     borderBottom: ".5px solid #0043594f",
-    paddingLeft: 8
+    paddingLeft: 50
 };
-
 
 const Person = (props) => {
     const [isExpanded, setExpanded] = useState(false);
-    
-    function ok (){
-        setExpanded(!isExpanded);
-        console.log("ta clicando")
-    }
+    const [isSelected, setSelected] = useState(false);
+
+        function showInfo (){
+            setExpanded(!isExpanded);
+        }
+
+
         const handleChange = (e) => {
-            setExpanded(e.currentTarget.checked);
+            // setExpanded(e.currentTarget.checked);
+            setSelected(e.currentTarget.checked);
         };
 
 
     const children = Object.values(props.children).map((child) => (        
         <Person
-        {...child}
-        key={child.id}
-        path={generatePath(props.path, child.id)}
+            {...child}
+            key={child.id}
+            path={generatePath(props.path, child.id)}
         />
     ));
 
@@ -43,26 +44,22 @@ const Person = (props) => {
         return children;
 
     const depth = props.path.split(".").length;
-        return (
-            <S.Container style={depth > 1 ? childStyle : undefined}>
-                <div>
-                    <input
-                    type="checkbox"
-                    value=""
-                    // checked={isExpanded}
-                    // onChange={handleChange}
-                    // disabled={children.length === 0}
-                    />
-               <S.Item onClick={ok}>{props.name}</S.Item>
-               <S.Icon 
-               onClick={ok}
-               onChange={handleChange}
-               disabled={children.length === 0}
-               >{isExpanded ? openedIcon : closedIcon }</S.Icon> 
-           
-               </div>
+    return (
+        <S.Container style={depth > 1 ? childStyle : undefined}>
+            <div>
+                <input 
+                type="checkbox" 
+                checked={isSelected}
+                onChange={handleChange}/>
+                <S.Item onClick={showInfo}>{props.name}</S.Item>
+                
+                {children.length > 0 ? 
+                    <S.Icon onClick={showInfo}>{isExpanded ? openedIcon : closedIcon}</S.Icon> 
+                : 
+                null }
+            </div>
             {isExpanded ? children : undefined}
-            </S.Container>
+        </S.Container>
     ); 
 };
 
@@ -72,7 +69,7 @@ export function Question () {
       return (
           <S.List>
               <S.Title>Árvore de Itens</S.Title>
-              <Person  children={base} path={""} />
+              <Person children={base} path={""} />
             </S.List>
     );
   
