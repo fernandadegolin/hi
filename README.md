@@ -1,7 +1,7 @@
 ## Projeto React 
 ### Hi - Árvore de Itens
 
-Um experimento com base em consumir API dentro do projeto, recriando uma árvore de itens, onde cada item tem vários itens internos e encadeados.<br>
+Um experimento com base em consumir API dentro do projeto, recriando uma árvore de itens, onde cada item tem vários outros internos e encadeados.<br>
  
 
 <br><br>
@@ -11,14 +11,15 @@ Um experimento com base em consumir API dentro do projeto, recriando uma árvore
 <br>
 <br>
 
-<br><br>
-<div align="center">
-  <img width="700" src="https://media.giphy.com/media/mEP8ryLHFKY32tL9G3/giphy.gif"/>
-</div>
 
-###### Tecnologias
+###### Tecnologia
 `React`
 
+###### Ferramentas
+`Styled-components`;
+`useState`;
+`Git para versionamento`;
+`GitHub para armazenamento`.
 
 <br></br>
 <div  align="center">
