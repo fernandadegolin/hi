@@ -1,53 +1,85 @@
-import React from 'react';
+import React, { useState }from 'react';
 import * as S from './style';
 import data from '../../data/data.json';
+import opened from '../../assets/opened.svg'
+import closed from '../../assets/closed.svg'
 
 const base = data;
+const openedIcon = <img src={opened} alt="icon opened"/>;
+const closedIcon = <img src={closed} alt="icon closed"/>;
 
-const Person = (props) => {
-  return (
-    <S.Container style={{ marginLeft: props.depth * 8 }}>
-      <ul>
-        <li onClick={clique}>{props.name}</li> 
-      </ul>
-      {Object.values(props.children).map((child) => (
-        <Person 
-        {...child} 
-        key={child.id} 
-        depth={props.depth + 1} 
-        isChecked={props.checked}/>
-        ))}
-    </S.Container>
-  );
+const generatePath = (...parts) => parts.filter((a) => a).join(".");
+
+const childStyle = {
+    marginLeft: 8,
+    borderLeft: "1px solid #0043594f",
+    borderBottom: ".5px solid #0043594f",
+    paddingLeft: 50
 };
 
-function clique (){
-  return (
-    console.log("ok")
-  )
-}
+const Person = (props) => {
+    const [isExpanded, setExpanded] = useState(false);
+    const [isSelected, setSelected] = useState(false);
 
-export function ItemTree (){
-return(
-  <Person children={base} depth={0} isChecked={false}/>
-);
-}
-      
-//     // FUNCIONA
-//     return (
+        function showInfo (){
+            setExpanded(!isExpanded);
+        }
 
-//         <S.Container>
-//             {api.map((item) => {
-//                 return (
-//                     <ul>
-//                         <input type="checkbox"></input>
-//                         <S.Name>{item.name}</S.Name>
-//                         <S.Name>{item.children}</S.Name>
-//                     </ul>
-//                 );
-//             }
-//             )}
-//         </S.Container>
 
-//     );
-// }
+        const handleChange = (e) => {
+            // setExpanded(e.currentTarget.checked);
+            setSelected(e.currentTarget.checked);
+        };
+
+
+    const children = Object.values(props.children).map((child) => (        
+        <Person
+            {...child}
+            key={child.id}
+            path={generatePath(props.path, child.id)}
+        />
+    ));
+
+    if (props.path === "") 
+        return children;
+
+    const depth = props.path.split(".").length;
+    return (
+        <S.Container style={depth > 1 ? childStyle : undefined}>
+            <div>
+                <input 
+                type="checkbox" 
+                checked={isSelected}
+                onChange={handleChange}/>
+                <S.Item onClick={showInfo}>{props.name}</S.Item>
+                
+                {children.length > 0 ? 
+                    <S.Icon onClick={showInfo}>{isExpanded ? openedIcon : closedIcon}</S.Icon> 
+                : 
+                null }
+            </div>
+            {isExpanded ? children : undefined}
+        </S.Container>
+    ); 
+};
+
+
+// COMPONENTE
+export function ItemList () {
+      return (
+          <S.List>
+              <S.Title>Árvore de Itens</S.Title>
+              <Person children={base} path={""} />
+            </S.List>
+    );
+  
+        }
+  
+
+
+//   return(
+//       <Person children={base} path={""} />
+//   )
+  
+
+
