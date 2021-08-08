@@ -48,7 +48,7 @@ const Person = (props) => {
         <S.Container style={depth > 1 ? childStyle : undefined}>
             <div>
                 <input 
-                type="checkbox" 
+                type="checkbox"  
                 checked={isSelected}
                 onChange={handleChange}/>
                 <S.Item onClick={showInfo}>{props.name}</S.Item>
