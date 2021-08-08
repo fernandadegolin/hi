@@ -1,5 +1,5 @@
 import React from 'react';
-import { ItemList } from '../components/ItemTree';
+import { ItemList } from '../components/ItemList';
 
 export function Home() {
     return( 

@@ -25,7 +25,8 @@ Um experimento com base em consumir API dentro do projeto, recriando uma árvore
 <ul>
     <li>Faça o clone do projeto: <br>https://github.com/fernandadegolin/hi.git</li>
     <li>Instale as dependências <br>npm install / yarn install</li>
-    <li>Rode: <br>npm start / yarn start</li>    
+    <li>Rode: <br>npm start / yarn start</li>
+    <li>Navegue: http://localhost:3000</li>    
 </ul>
 
 <br></br>

@@ -10,12 +10,14 @@ const closedIcon = <img src={closed} alt="icon closed"/>;
 
 const generatePath = (...parts) => parts.filter((a) => a).join(".");
 
+
 const childStyle = {
     marginLeft: 8,
     borderLeft: "1px solid #0043594f",
     borderBottom: ".5px solid #0043594f",
     paddingLeft: 50
-};
+}
+
 
 const Person = (props) => {
     const [isExpanded, setExpanded] = useState(false);
@@ -63,23 +65,11 @@ const Person = (props) => {
     ); 
 };
 
-
-// COMPONENTE
 export function ItemList () {
-      return (
-          <S.List>
-              <S.Title>Árvore de Itens</S.Title>
-              <Person children={base} path={""} />
-            </S.List>
+    return (
+        <S.List>
+            <S.Title>Árvore de Itens</S.Title>
+            <Person children={base} path={""} />
+        </S.List>
     );
-  
-        }
-  
-console.log(ItemList);
-
-//   return(
-//       <Person children={base} path={""} />
-//   )
-  
-
-
+}
