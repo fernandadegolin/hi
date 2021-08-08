@@ -6,7 +6,7 @@ Um experimento com base em consumir API dentro do projeto, recriando uma árvore
 
 <br><br>
 <div  align="center">
-  <img src="https://ik.imagekit.io/fernandadegolin/Component_1__3__XRs7XshHa.png" />
+  <img src="https://github.com/fernandadegolin/hi/blob/master/src/assets/imgReadme/readme.png" />
 </div>
 <br>
 <br>
@@ -37,11 +37,6 @@ Um experimento com base em consumir API dentro do projeto, recriando uma árvore
     <img alt="LinkedIn" src="https://img.shields.io/twitter/url?label=linkedin&logo=linkedin&logoColor=white&style=for-the-badge&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ffernandadegolin%2F">
   </a>
 
-<!-- Twitter -->
-  <a href="https://twitter.com/fesiviero">
-    <img alt="Twitter" src="https://img.shields.io/twitter/url?label=twitter&logo=twitter&logoColor=white&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Ffesiviero">
-  </a>
-  
   
   <!-- Instagram -->
   <a href="https://www.instagram.com/fernandadegolin/">
