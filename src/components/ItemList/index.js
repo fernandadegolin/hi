@@ -18,7 +18,6 @@ const childStyle = {
     paddingLeft: 50
 }
 
-
 const Person = (props) => {
     const [isExpanded, setExpanded] = useState(false);
     const [isSelected, setSelected] = useState(false);
