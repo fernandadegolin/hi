@@ -5,8 +5,8 @@ import opened from '../../assets/opened.svg';
 import closed from '../../assets/closed.svg';
 
 const base = data;
-const openedIcon = <img src={opened} alt="icon opened"/>;
-const closedIcon = <img src={closed} alt="icon closed"/>;
+const OpenedIcon = <img src={opened} alt="icon opened"/>;
+const ClosedIcon = <img src={closed} alt="icon closed"/>;
 
 const generatePath = (...parts) => parts.filter((a) => a).join(".");
 
@@ -55,7 +55,7 @@ const Person = (props) => {
                 <S.Item onClick={showInfo}>{props.name}</S.Item>
                 
                 {children.length > 0 ? 
-                    <S.Icon onClick={showInfo}>{isExpanded ? openedIcon : closedIcon}</S.Icon> 
+                    <S.Icon onClick={showInfo}>{isExpanded ? OpenedIcon : ClosedIcon}</S.Icon> 
                 : 
                 null }
             </div>
