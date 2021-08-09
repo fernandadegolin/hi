@@ -15,7 +15,7 @@ const childStyle = {
     marginLeft: 8,
     borderLeft: "1px solid #0043594f",
     borderBottom: ".5px solid #0043594f",
-    paddingLeft: 50
+    paddingLeft: 50,
 }
 
 const Person = (props) => {

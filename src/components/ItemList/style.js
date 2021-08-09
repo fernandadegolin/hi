@@ -14,6 +14,11 @@ export const Container = styled.div`
     width: 100%;
     min-width: 320px;
     max-width: 540px;
+
+    @media screen and (max-width: 640px) {
+      min-width: inherit;
+      margin-left: inherit;
+    }
   }
 `;
 
