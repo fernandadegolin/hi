@@ -20,13 +20,15 @@ Um experimento com base em consumir API dentro do projeto, recriando uma árvore
 `Git para versionamento`
 `GitHub para armazenamento`
 
-###### Rodar a Aplicação
+###### Aplicação
 <ul>
     <li>Faça o clone do projeto: <br>https://github.com/fernandadegolin/hi.git</li>
     <li>Instale as dependências <br>npm install / yarn install</li>
     <li>Rode: <br>npm start / yarn start</li>
     <li>Navegue: <br>http://localhost:3000</li>    
 </ul>
+
+###### Se tiver sugestões de melhoramento, vamos conversar ")
 
 <br></br>
 <div  align="center">
